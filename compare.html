@@ -5,59 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Esopianeti</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #000;
-      color: white;
-      
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 10px;
-      color: white;
-      text-decoration: none;
-    }
-
-    .planet-compare {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 50px;
-      margin-top: 40px;
-      flex-wrap: wrap;
-    }
-
-    .planet img {
-      border-radius: 50%;
-      transition: transform 0.5s;
-    }
-
-    .planet-name {
-      margin-top: 10px;
-    }
-
-    .buttons {
-      margin: 20px;
-    }
-
-    button {
-      margin: 5px;
-      padding: 10px 20px;
-      background: #333;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #555;
-    }
-  </style>
 </head>
-<body>
+<body id="com">
   <nav>
     <a href="index.html">Home</a>
     <a href="kepler.html">Kepler-452b</a>
@@ -68,16 +17,16 @@
     <a href="compare.html">Confronto con la terra</a>
   </nav>
 
-  <h1>Confronto con la Terra</h1>
+  <h1 color="white">Confronto con la Terra</h1>
 
   <div class="planet-compare">
-    <!-- Земля слева -->
+    
     <div class="planet">
       <img src="textures/earth.jpg" alt="Earth" width="300" />
       <div class="planet-name">Terra</div>
     </div>
 
-    <!-- Другая планета справа -->
+    
     <div class="planet">
       <img id="planetImage" src="textures/Kepler.jpg" alt="Other Planet" width="300" />
       <div class="planet-name" id="planetName">Kepler-452b</div>
@@ -109,7 +58,7 @@ function setPlanet(key) {
   const scale = planet.diameter / baseDiameter;
   const newSize = baseSize * scale;
 
-  
+
   const img = document.getElementById("planetImage");
   const name = document.getElementById("planetName");
   img.src = planet.image;
