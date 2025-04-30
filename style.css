@@ -81,15 +81,21 @@ p{
 #img1{
   width: 1400px;
   height: 800px;
+  border-radius: 50%;
+      transition: transform 0.5s;
 }
 #img2{
 
   width: 1200px;
   height: 1200px;
+  border-radius: 50%;
+      transition: transform 0.5s;
 }
 #img3{
   width: 1580px;
   height: 1200px;
+  border-radius: 50%;
+      transition: transform 0.5s;
 }
 #img4{
   width: 1580px;
