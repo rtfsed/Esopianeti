@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Esopianeti</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esopianeti</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #000;
+      color: white;
+      
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .planet-compare {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .planet img {
+      border-radius: 50%;
+      transition: transform 0.5s;
+    }
+
+    .planet-name {
+      margin-top: 10px;
+    }
+
+    .buttons {
+      margin: 20px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #555;
+    }
+  </style>
 </head>
-<body id="main">  
-<nav>
+<body>
+  <nav>
     <a href="index.html">Home</a>
     <a href="kepler.html">Kepler-452b</a>
     <a href="proxima.html">Proxima Centauri b</a>
@@ -15,16 +66,58 @@
     <a href="osiris.html">HD 209458 b (Osiris)</a>
     <a href="cancri.html">55 Cancri e</a>
     <a href="compare.html">Confronto con la terra</a>
-</nav>
+  </nav>
 
+  <h1>Confronto con la Terra</h1>
 
+  <div class="planet-compare">
+    <!-- Земля слева -->
+    <div class="planet">
+      <img src="textures/earth.jpg" alt="Earth" width="300" />
+      <div class="planet-name">Terra</div>
+    </div>
 
+    <!-- Другая планета справа -->
+    <div class="planet">
+      <img id="planetImage" src="textures/Kepler.jpg" alt="Other Planet" width="300" />
+      <div class="planet-name" id="planetName">Kepler-452b</div>
+    </div>
+  </div>
 
+  <div class="buttons">
+    <button onclick="setPlanet('kepler')">Kepler</button>
+    <button onclick="setPlanet('proxima')">Proxima</button>
+    <button onclick="setPlanet('trappist')">Trappist</button>
+    <button onclick="setPlanet('osiris')">Osiris</button>
+    <button onclick="setPlanet('cancri')">Cancri</button>
+  </div>
+  <script>
+    const planetData = {
+  earth: { name: "Earth", diameter: 12742, image: "textures/earth.jpg" },
+  kepler: { name: "Kepler-452b", diameter: 16000, image: "textures/Kepler.jpg" },
+  proxima: { name: "Proxima Centauri b", diameter: 11900, image: "textures/proxima.jpg" },
+  trappist: { name: "Trappist-1e", diameter: 11600, image: "textures/TRAP.png" },
+  osiris: { name: "HD 209458 b (Osiris)", diameter: 143000, image: "textures/OS.jpeg" },
+  cancri : { name: "55 Cancri e", diameter: 20200, image: "textures/Cancri.jpg" },
+};
 
+const baseDiameter = planetData.earth.diameter;
+const baseSize = 300; // px
 
+function setPlanet(key) {
+  const planet = planetData[key];
+  const scale = planet.diameter / baseDiameter;
+  const newSize = baseSize * scale;
 
-
-<button id="scrollTopBtn" title="Наверх">↑</button>
-    <script src="main.js"></script>
+  const img = document.getElementById("planetImage");
+  const name = document.getElementById("planetName");
+  img.src = planet.image;
+  img.alt = planet.name;
+  img.style.width = newSize + "px";
+  name.textContent = planet.name;
+}
+  </script>
+  
+  
 </body>
 </html>
