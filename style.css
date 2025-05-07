@@ -6,6 +6,20 @@ html,body{
     background-color:black;
     color: whitesmoke;
 }
+@font-face {
+  font-family: 'Backso';
+  src: url('/fonts/Backso.woff2') format('woff2'),
+       url('/fonts/Backso.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pokemon';
+  src: url('/fonts/PokemonSolidNormal.woff2') format('woff2'),
+       url('/fonts/PokemonSolidNormal.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 a{
     text-decoration: none;
     color: inherit;
@@ -61,6 +75,8 @@ nav{
   height: 300px;
 }
 #eso{
+  
+  font-family: 'Backso',sans-serif;
   font-size: 52px;
   position: absolute;
   left: 39%;
@@ -144,4 +160,8 @@ button {
 
 button:hover {
   background: #555;
+}
+.test>h1{
+  font-size: 25px;
+  font-family: "Pokemon",sans-serif;
 }
