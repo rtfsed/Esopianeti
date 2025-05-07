@@ -22,7 +22,7 @@
   <div class="planet-compare">
     
     <div class="planet">
-      <img src="textures/earth.jpg" alt="Earth" width="300" />
+      <img id="earth" src="textures/earth.jpg" alt="Earth" width="300" />
       <div class="planet-name">Terra</div>
     </div>
 
@@ -52,12 +52,25 @@
 
 const baseDiameter = planetData.earth.diameter;
 const baseSize = 300; // px
-
+let earthImg = document.getElementById("earth");
+   
 function setPlanet(key) {
+  if(key=='osiris'){
+    const planet = planetData[key];
+   
+    const img = document.getElementById("planetImage");
+    const name = document.getElementById("planetName");
+   earthImg.style.width = "50px" 
+  img.src = planet.image;
+  img.alt = planet.name;
+  img.style.width = baseSize + "px";
+  name.textContent = planet.name;
+  }
+  else{
   const planet = planetData[key];
   const scale = planet.diameter / baseDiameter;
   const newSize = baseSize * scale;
-
+  earthImg.style.width = baseSize + "px"
 
   const img = document.getElementById("planetImage");
   const name = document.getElementById("planetName");
@@ -65,6 +78,7 @@ function setPlanet(key) {
   img.alt = planet.name;
   img.style.width = newSize + "px";
   name.textContent = planet.name;
+}
 }
   </script>
   
