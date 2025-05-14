@@ -7,3 +7,21 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Female Underwear';
+    src: url('FemaleUnderwear.woff2') format('woff2'),
+        url('FemaleUnderwear.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Semi';
+    src: url('Semi.woff2') format('woff2'),
+        url('Semi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

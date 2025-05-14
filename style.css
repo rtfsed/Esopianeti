@@ -13,15 +13,32 @@ html,body{
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'Pokemon';
-  src: url('/fonts/PokemonSolidNormal.woff2') format('woff2'),
-       url('/fonts/PokemonSolidNormal.woff') format('woff');
+  font-family: 'SpiderMan';
+  src: url('/fonts/THEAMAZINGSPIDER-MAN.woff2') format('woff2'),
+       url('/fonts/THEAMAZINGSPIDER-MAN.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Penis';
+  src: url('/fonts/Penis-Typography-Black.woff2') format('woff2'),
+       url('/fonts/Penis-Typography-Black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Resort';
+  src: url('/fonts/TheIslandResort.woff2') format('woff2'),
+       url('/fonts/TheIslandResort.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 p{
-  font-family: "Pokemon",sans-serif;
+  font-family: "Resort",sans-serif;
 }
 a{
     text-decoration: none;
@@ -79,7 +96,7 @@ nav{
 }
 #eso{
   
-  font-family: 'Backso',sans-serif;
+  font-family: 'SpiderMan',sans-serif;
   font-size: 52px;
   position: absolute;
   left: 39%;
@@ -165,6 +182,6 @@ button:hover {
   background: #555;
 }
 .test>h1{
-  font-size: 30px;
-  font-family: "Pokemon",sans-serif;
+  font-size: 50px;
+  font-family: "Resort",sans-serif;
 }
