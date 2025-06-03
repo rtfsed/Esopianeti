@@ -83,7 +83,7 @@ nav{
   align-items:flex-start;
   padding: 200px 50px;
 }
-.pianeti>div{
+.pianeti>a>div{
   display: flex;
   flex-direction: row; 
   align-items: center; 
@@ -103,7 +103,7 @@ nav{
   color: whitesmoke;
 }
 p{
-  font-size: 32px;
+  font-size: 42px;
   color: whitesmoke;
 }
 .test{
